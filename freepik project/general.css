@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.65%;
+  overflow-x: hidden;
+}
+/*  */
+body {
+  /* font-family: sans-serif;
+  line-height: 1;
+  background-color: #fff;
+  overflow-x: hidden; */
+
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  counter-reset: my-count 5;
+  -webkit-animation: countdown 5s linear infinite;
+  animation: countdown 5s linear infinite;
+}
+
+body::after {
+  content: counter(my-count);
+  font-size: 30rem;
+}
+/* 
+@-webkit-keyframes countdown {
+  0% {
+    background: blueviolet;
+  }
+
+  20% {
+    counter-increment: my-count -1;
+  }
+  40% {
+    counter-increment: my-count -2;
+  }
+  60% {
+    counter-increment: my-count -3;
+  }
+  80% {
+    counter-increment: my-count -4;
+  }
+  100% {
+  }
+} */
+
+/*  */
+
+.container-header {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.332),
+      rgba(0, 0, 0, 0.382)
+    ),
+    url(https://fps.cdnpk.net/images/ai/cover-subhome.jpg?w=1500);
+  background-position: center;
+  background-size: cover;
+  transition-delay: 0.1s;
+  padding: 0 0 10rem 0;
+}
+
+.sub-border {
+  border-bottom: 1px solid #ffffff63;
+  margin-bottom: 2.7rem;
+}
+
+.sub-text {
+  color: #ffffffeb;
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.sub-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 8.6rem;
+  row-gap: 3.2rem;
+}
+
+.sub-details li {
+  margin-right: auto;
+}
+
+/* ///////////////////////////////////////////////////////////////////// */
+.sub-menu {
+  position: absolute;
+  margin-right: -40rem;
+  background-color: black;
+  box-shadow: 0 2rem 4.5rem #00000020;
+  margin-top: 34rem;
+  border-radius: 0.8rem;
+  transition: all ease-out 0.3s;
+  opacity: 0;
+  z-index: -1;
+  padding: 3.8rem 13rem 4.8rem 4rem;
+}
+
+.nav-menu li:hover .sub-menu {
+  opacity: 1;
+  z-index: 99;
+}
+
+.sub-details-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 8.6rem;
+  row-gap: 3.2rem;
+}
+
+.sub-details-2 li {
+  margin-right: auto;
+}
